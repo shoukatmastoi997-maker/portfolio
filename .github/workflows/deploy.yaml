@@ -13,6 +13,6 @@ jobs:
       - name: aws configuration
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          aws-region: us-east-a
+          aws-region: us-east-1
           aws-access-id: ${{secrets.access_key}}
           aws-secret-acess-key: ${{secrets.secret_key}}
