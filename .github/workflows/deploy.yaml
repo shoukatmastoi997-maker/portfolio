@@ -1,22 +1,30 @@
 name: deploy website to s3
+
 on:
   push:
     branches:
       - main
+
+# REQUIRED for OIDC authentication
+permissions:
+  id-token: write
+  contents: read
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      
+
       - name: checkout code
         uses: actions/checkout@v4
-      # 5. Configure AWS
+
+      # Configure AWS via OIDC Role
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
+          role-to-assume: arn:aws:iam::254185428379:role/GitHubActions-Portfolio-Role
           aws-region: ${{ secrets.AWS_REGION }}
-          aws-access-key-id: ${{ secrets.ACCESS_KEY }}
-          aws-secret-access-key: ${{ secrets.SECRET_KEY }}
+
       - name: deploy to s3
         run: |
           aws s3 sync . s3://${{ secrets.bucket_name }} --exclude ".git/*" --exclude ".github/*"
