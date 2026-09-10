@@ -10,3 +10,9 @@ jobs:
       
       - name: checkout code
         uses: actions/checkout@v4
+      - name: aws configuration
+        uses: actions/configure-aws-credentials@v4
+        with:
+          aws-region: us-east-a
+          aws-access-id: ${{secrets.access_key}}
+          aws-secret-acess-key: ${{secrets.secret_key}}
