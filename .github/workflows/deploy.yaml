@@ -19,4 +19,4 @@ jobs:
           aws-secret-access-key: ${{ secrets.SECRET_KEY }}
       - name: deploy to s3
         run: |
-          aws s3 create-bucket --bucket shoukat-portfoliio-1 --region us-east-1
+          aws s3api create-bucket --bucket shoukat-portfoliio-1
