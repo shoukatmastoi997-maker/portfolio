@@ -3,169 +3,433 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Personal portfolio of Shoukat Ali, DevOps Engineer and Cloud Architect.">
-  <title>Shoukat Ali — DevOps Engineer</title>
-  <link rel="stylesheet" href="css2">
-  <link rel="stylesheet" href="all.min.css">
+  <meta name="description" content="Shoukat Ali — DevOps & Cloud Engineer and Full-Stack Developer in Islamabad, Pakistan. AWS, Terraform, Kubernetes, CI/CD, Ansible, Prometheus & Grafana.">
+  <meta name="theme-color" content="#070b14">
+  <meta property="og:title" content="Shoukat Ali — DevOps & Cloud Engineer">
+  <meta property="og:description" content="I build, deploy, secure, automate and monitor reliable, cost-efficient cloud applications.">
+  <meta property="og:image" content="https://shoukatali.cloud/profile.png">
+  <meta property="og:url" content="https://shoukatali.cloud/">
+  <link rel="canonical" href="https://shoukatali.cloud/">
+  <title>Shoukat Ali — DevOps & Cloud Engineer</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%2306b6d4'/><text x='50%' y='54%' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-weight='700' font-size='30' fill='%23070b14'>SA</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
   <link rel="stylesheet" href="styles.css">
+  <script>
+    try { if (localStorage.getItem('theme') === 'light') document.documentElement.dataset.theme = 'light'; } catch (e) {}
+  </script>
 </head>
 <body>
-  <div class="bg-animation"><div class="bg-gradient"></div><div class="floating-shapes"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div></div>
-  <header class="header"><nav class="nav container">
-    <a href="#about" class="nav-logo"><span class="logo-text">Shoukat</span><span class="logo-dot">.</span></a>
-    <ul class="nav-menu"><li><a href="#about" class="nav-link">About</a></li><li><a href="#skills" class="nav-link">Skills</a></li><li><a href="#experience" class="nav-link">Experience</a></li><li><a href="#projects" class="nav-link">Projects</a></li><li><a href="#contact" class="nav-link">Contact</a></li></ul>
-    <div class="nav-actions"><a href="#contact" class="btn btn-glow">Hire Me</a><button class="theme-toggle" id="themeToggle" aria-label="Toggle color theme"><i class="fas fa-moon"></i></button></div>
-    <button class="nav-toggle" id="navToggle" aria-label="Open navigation"><i class="fas fa-bars"></i></button>
-  </nav></header>
+  <div class="backdrop" aria-hidden="true">
+    <div class="grid-bg"></div>
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
+
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <header class="header" id="header">
+    <nav class="nav container" aria-label="Primary">
+      <a href="#home" class="logo" aria-label="Shoukat Ali — home">
+        <span class="logo-mark">SA</span>
+        <span class="logo-text">Shoukat<span class="accent">.</span>Cloud</span>
+      </a>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="icon-btn" id="themeToggle" aria-label="Toggle color theme"><i class="fas fa-moon"></i></button>
+        <a href="#contact" class="btn btn-primary btn-sm hide-sm">Hire Me</a>
+        <button class="icon-btn nav-toggle" id="navToggle" aria-label="Open navigation" aria-expanded="false" aria-controls="navMenu"><i class="fas fa-bars"></i></button>
+      </div>
+    </nav>
+  </header>
 
   <main>
-    <section class="hero" id="about"><div class="container hero-container">
-      <div class="hero-content"><div class="hero-badge"><span class="badge-dot"></span>Available for opportunities</div>
-        <h1 class="hero-name">Hi, I’m <span class="gradient-text">Shoukat Ali</span></h1>
-        <h2 class="hero-title">DevOps Engineer &amp; Cloud Architect</h2>
-        <p class="hero-description">I turn infrastructure challenges into secure, scalable solutions. I build cloud architecture, automate delivery, and help modern applications ship reliably.</p>
-        <div class="hero-buttons"><a href="#projects" class="btn btn-primary"><span>View My Work</span><i class="fas fa-arrow-right"></i></a><a href="#contact" class="btn btn-glass">Get In Touch</a></div>
-        <div class="hero-stats"><div class="hero-stat"><span class="stat-number" data-target="20">0</span><span class="stat-plus">+</span><span class="stat-label">Projects</span></div><div class="hero-stat"><span class="stat-number" data-target="3">0</span><span class="stat-plus">+</span><span class="stat-label">Years Exp</span></div><div class="hero-stat"><span class="stat-number" data-target="30">0</span><span class="stat-plus">+</span><span class="stat-label">Cloud Services</span></div></div>
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="pill"><span class="pulse"></span>Open to DevOps &amp; Cloud opportunities</div>
+          <h1 class="hero-name">Hi, I’m <span class="gradient-text">Shoukat Ali</span></h1>
+          <p class="hero-role mono">
+            <span class="prompt">$</span> <span id="typed">DevOps &amp; Cloud Engineer</span><span class="caret"></span>
+          </p>
+          <p class="hero-lead">
+            I build, deploy, secure, automate and monitor reliable, cost-efficient applications on AWS —
+            combining a full-stack development background with hands-on cloud engineering.
+          </p>
+          <div class="hero-cta">
+            <a href="#projects" class="btn btn-primary">View My Work <i class="fas fa-arrow-right"></i></a>
+            <a href="#contact" class="btn btn-ghost">Get In Touch</a>
+          </div>
+          <div class="hero-social">
+            <a href="https://github.com/shoukatmastoi997-maker" target="_blank" rel="noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/shoukatali999/" target="_blank" rel="noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="mailto:shoukatmastoi999@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            <span class="hero-loc"><i class="fas fa-location-dot"></i> Islamabad, Pakistan</span>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="portrait">
+            <div class="portrait-ring"></div>
+            <img src="profile.png" alt="Portrait of Shoukat Ali" width="1086" height="1448">
+            <div class="chip chip-aws"><i class="fab fa-aws"></i> AWS</div>
+            <div class="chip chip-k8s"><i class="fas fa-dharmachakra"></i> Kubernetes</div>
+            <div class="chip chip-tf"><i class="fas fa-cubes"></i> Terraform</div>
+          </div>
+          <div class="terminal" aria-hidden="true">
+            <div class="terminal-bar"><span></span><span></span><span></span><em>~/infra</em></div>
+            <pre class="mono"><span class="t-dim">$</span> terraform apply -auto-approve
+<span class="t-ok">✔</span> Apply complete! Resources: 12 added.
+<span class="t-dim">$</span> kubectl rollout status deploy/api
+<span class="t-ok">✔</span> deployment "api" successfully rolled out</pre>
+          </div>
+        </div>
       </div>
-      <div class="hero-image"><div class="image-container"><div class="image-glow"></div><div class="image-border"></div><img src="profile.png" alt="Shoukat Ali"></div><div class="floating-icons"><div class="floating-icon aws"><i class="fab fa-aws"></i></div><div class="floating-icon docker"><i class="fab fa-docker"></i></div><div class="floating-icon linux"><i class="fab fa-linux"></i></div><div class="floating-icon git"><i class="fab fa-git-alt"></i></div></div></div>
-    </div><div class="scroll-indicator"><div class="mouse"><div class="wheel"></div></div><span>Scroll Down</span></div></section>
 
-    <section class="trusted-by"><div class="container"><p class="trusted-label">Infrastructure projects delivered for innovative teams</p><div class="company-logos"><div class="logo-item">BigGorillaApps</div><div class="logo-item">SignDevOps</div><div class="logo-item">LifeMatch</div><div class="logo-item">Drone-Reunion</div><div class="logo-item">Drones-Matrix</div><div class="logo-item">Dhulao</div><div class="logo-item">MedMinds</div></div></div></section>
+      <div class="container">
+        <div class="stats">
+          <div class="stat"><span class="stat-num" data-target="5">0</span><span class="stat-suffix">+</span><span class="stat-label">Production-style projects</span></div>
+          <div class="stat"><span class="stat-num" data-target="10">0</span><span class="stat-suffix">+</span><span class="stat-label">AWS services in use</span></div>
+          <div class="stat"><span class="stat-num" data-target="25">0</span><span class="stat-suffix">+</span><span class="stat-label">DevOps &amp; dev tools</span></div>
+          <div class="stat"><span class="stat-num" data-target="100">0</span><span class="stat-suffix">%</span><span class="stat-label">Infrastructure as Code</span></div>
+        </div>
+      </div>
+    </section>
 
-    <section class="skills" id="skills"><div class="container"><div class="section-header"><span class="section-subtitle">What I Do</span><h2 class="section-title">Skills &amp; <span class="gradient-text">Expertise</span></h2><p class="section-description">The practical tools I use to build, automate, and operate cloud infrastructure.</p></div><div class="skills-grid">
-      <article class="skill-card glass-card"><div class="skill-icon"><i class="fab fa-aws"></i></div><h3>AWS Cloud</h3><p>Secure, reliable infrastructure designed around your application.</p><div class="skill-tags"><span>EC2</span><span>S3</span><span>Lambda</span><span>RDS</span><span>VPC</span><span>ECS</span></div></article>
-      <article class="skill-card glass-card"><div class="skill-icon"><i class="fas fa-infinity"></i></div><h3>CI/CD &amp; Automation</h3><p>Repeatable build, test, and deployment workflows.</p><div class="skill-tags"><span>GitHub Actions</span><span>GitLab CI/CD</span><span>Jenkins</span><span>Ansible</span></div></article>
-      <article class="skill-card glass-card"><div class="skill-icon"><i class="fab fa-docker"></i></div><h3>Containerization</h3><p>Portable services and dependable orchestration.</p><div class="skill-tags"><span>Docker</span><span>Kubernetes</span><span>Helm</span><span>ECS</span></div></article>
-      <article class="skill-card glass-card"><div class="skill-icon"><i class="fas fa-code"></i></div><h3>Infrastructure as Code</h3><p>Versioned infrastructure that is easy to reproduce.</p><div class="skill-tags"><span>Terraform</span><span>CloudFormation</span><span>Python</span><span>Shell</span></div></article>
-      <article class="skill-card glass-card"><div class="skill-icon"><i class="fas fa-chart-line"></i></div><h3>Observability</h3><p>Actionable monitoring, alerting, and operational insight.</p><div class="skill-tags"><span>CloudWatch</span><span>Dashboards</span><span>Alerting</span></div></article>
-      <article class="skill-card glass-card"><div class="skill-icon"><i class="fas fa-server"></i></div><h3>System Administration</h3><p>Well-maintained Linux systems and production services.</p><div class="skill-tags"><span>Linux</span><span>Nginx</span><span>Networking</span></div></article>
-    </div></div></section>
+    <!-- ============ ABOUT ============ -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-head">
+          <h2>From full-stack code to <span class="gradient-text">cloud infrastructure</span></h2>
+        </div>
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <p>
+              I’m a <strong>DevOps and Cloud Engineer</strong> with hands-on experience in AWS, CI/CD, Infrastructure as Code,
+              Linux and server administration, containerization, automation and production deployments. I containerize
+              applications, manage Linux servers, secure applications and infrastructure, manage databases, and troubleshoot
+              production environments.
+            </p>
+            <p>
+              I started my technology journey in <strong>Full-Stack Development</strong>, building web applications with Python,
+              React, REST APIs and databases. For my Final Year Project I built an
+              <strong>AI-powered Disease Prediction and Health Analytics System</strong>, integrating machine learning with a
+              complete web application.
+            </p>
+            <p>
+              Today I combine <strong>software development and cloud engineering</strong> to build, deploy, secure, automate,
+              monitor, troubleshoot and operate reliable, cost-efficient applications.
+            </p>
+          </div>
+          <div class="about-cards">
+            <div class="mini-card reveal"><i class="fas fa-cloud"></i><div><h3>Cloud &amp; Cost</h3><p>Cost-aware AWS architecture and resource optimization.</p></div></div>
+            <div class="mini-card reveal"><i class="fas fa-code-branch"></i><div><h3>Automation First</h3><p>Pipelines, IaC and config management over manual steps.</p></div></div>
+            <div class="mini-card reveal"><i class="fas fa-shield-halved"></i><div><h3>Secure by Default</h3><p>IAM, managed secrets, non-root containers, least privilege.</p></div></div>
+            <div class="mini-card reveal"><i class="fas fa-laptop-code"></i><div><h3>Developer Mindset</h3><p>I’ve built the apps I deploy — FastAPI, Flask, React, TS.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <section class="experience" id="experience"><div class="container"><div class="section-header"><span class="section-subtitle">My Journey</span><h2 class="section-title">Work <span class="gradient-text">Experience</span></h2></div><div class="experience-timeline"><div class="timeline-line"></div>
-      <article class="experience-card glass-card"><div class="experience-dot"></div><div class="experience-date"><span class="date-badge">Aug 2026 — Present</span></div><div class="experience-content"><div class="company-info"><h3>DevOps Engineer &amp; Cloud Architect</h3><p class="company-name"><i class="fas fa-building"></i> Metavystic Software Company</p></div><ul class="experience-details"><li>Design and maintain CI/CD pipelines for reliable software delivery.</li><li>Automate build, test, and deployment workflows across environments.</li><li>Build scalable cloud architecture and improve infrastructure reliability.</li></ul><div class="tech-stack"><span>AWS</span><span>Docker</span><span>Kubernetes</span><span>CI/CD</span></div></div></article>
-    </div></div></section>
+    <!-- ============ SKILLS ============ -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-head">
+          <h2>Core technical <span class="gradient-text">skills</span></h2>
+          <p>The tools I use to build, ship and operate cloud infrastructure and applications.</p>
+        </div>
+        <div class="skills-grid">
+          <article class="card skill reveal">
+            <div class="skill-icon"><i class="fab fa-aws"></i></div>
+            <h3>Cloud &amp; Cost Optimization</h3>
+            <div class="tags"><span>EC2</span><span>VPC</span><span>IAM</span><span>S3</span><span>EKS</span><span>ECS</span><span>ECR</span><span>Fargate</span><span>Cost-aware architecture</span><span>Resource optimization</span></div>
+          </article>
+          <article class="card skill reveal">
+            <div class="skill-icon"><i class="fas fa-layer-group"></i></div>
+            <h3>Infrastructure as Code</h3>
+            <div class="tags"><span>Terraform</span><span>Modules</span><span>State management</span><span>Workspaces</span><span>Ansible</span><span>Playbooks</span><span>Roles</span><span>Inventories</span></div>
+          </article>
+          <article class="card skill reveal">
+            <div class="skill-icon"><i class="fab fa-docker"></i></div>
+            <h3>Containers &amp; Orchestration</h3>
+            <div class="tags"><span>Docker</span><span>Docker Compose</span><span>Kubernetes</span><span>EKS</span><span>Minikube</span><span>kubectl</span><span>Helm</span></div>
+          </article>
+          <article class="card skill reveal">
+            <div class="skill-icon"><i class="fas fa-infinity"></i></div>
+            <h3>CI/CD</h3>
+            <div class="tags"><span>Jenkins</span><span>Pipeline-as-Code</span><span>Multibranch</span><span>Shared Libraries</span><span>GitHub Actions</span><span>Webhooks</span><span>Nexus</span><span>Docker Hub</span><span>Amazon ECR</span></div>
+          </article>
+          <article class="card skill reveal">
+            <div class="skill-icon"><i class="fab fa-linux"></i></div>
+            <h3>Linux &amp; Server Administration</h3>
+            <div class="tags"><span>Ubuntu</span><span>CentOS</span><span>Nginx</span><span>Apache</span><span>Web server config</span><span>Networking</span><span>Troubleshooting</span></div>
+          </article>
+          <article class="card skill reveal">
+            <div class="skill-icon"><i class="fas fa-chart-line"></i></div>
+            <h3>Monitoring &amp; Observability</h3>
+            <div class="tags"><span>Prometheus</span><span>Grafana</span><span>Alertmanager</span><span>Node Exporter</span></div>
+          </article>
+          <article class="card skill reveal">
+            <div class="skill-icon"><i class="fas fa-terminal"></i></div>
+            <h3>Scripting &amp; Automation</h3>
+            <div class="tags"><span>Python</span><span>Bash</span></div>
+          </article>
+          <article class="card skill reveal">
+            <div class="skill-icon"><i class="fas fa-robot"></i></div>
+            <h3>Full-Stack &amp; AI Engineering</h3>
+            <div class="tags"><span>FastAPI</span><span>Flask</span><span>React.js</span><span>TypeScript</span><span>REST APIs</span><span>PostgreSQL</span><span>SQLite</span><span>PyTorch</span><span>Machine Learning</span><span>Neural Networks</span><span>Explainable AI</span><span>ML model serving</span></div>
+          </article>
+          <article class="card skill reveal">
+            <div class="skill-icon"><i class="fab fa-git-alt"></i></div>
+            <h3>Version Control</h3>
+            <div class="tags"><span>Git</span><span>GitHub</span><span>Branching strategies</span><span>Code reviews</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
 
-<section class="projects" id="projects">
-  <div class="container">
-    <div class="section-header">
-      <span class="section-subtitle">My Work</span>
-      <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
-      <p class="section-description">A selection of cloud infrastructure, Kubernetes, and DevOps solutions I have engineered.</p>
-    </div>
-    <div class="projects-grid">
-      
-      <!-- Project 1: Disease Prediction Platform -->
-      <article class="project-card glass-card featured">
-        <div class="project-image">
-          <div class="project-overlay">
-            <a href="https://github.com/shoukat-ali" target="_blank" rel="noreferrer" class="project-link" aria-label="View Disease Prediction Project">
-              <i class="fas fa-external-link-alt"></i>
+    <!-- ============ EXPERIENCE ============ -->
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="section-head">
+          <h2>Professional <span class="gradient-text">experience</span></h2>
+        </div>
+        <div class="timeline">
+          <article class="card job reveal">
+            <div class="job-head">
+              <div class="job-logo"><i class="fas fa-building"></i></div>
+              <div class="job-title">
+                <h3>DevOps and Cloud Engineer</h3>
+                <p>Metavystic Software Company · Islamabad, Pakistan</p>
+              </div>
+              <span class="badge"><span class="pulse"></span>Aug 2026 — Present</span>
+            </div>
+            <ul class="job-list">
+              <li>Build and maintain CI/CD pipelines in <strong>Jenkins</strong> and <strong>GitHub Actions</strong> that automate build, test and deployment workflows for microservices-based applications.</li>
+              <li>Drive <strong>AWS cost optimization</strong> through cost-aware architecture and right-sized resources.</li>
+              <li>Containerise applications with <strong>Docker</strong> and deploy them to Kubernetes on <strong>Amazon EKS</strong>, using Helm charts, rolling updates and autoscaling configuration.</li>
+              <li>Provision AWS infrastructure (EC2, VPC, IAM, S3, ECR, EKS) with <strong>Terraform</strong> to keep environments repeatable and version-controlled.</li>
+              <li>Automate Linux server configuration and application deployment with <strong>Ansible</strong>, including Nginx web server setup.</li>
+              <li>Maintain container registries and artifact repositories (<strong>Nexus</strong>, <strong>Amazon ECR</strong>) for image versioning and artifact storage.</li>
+              <li>Configure <strong>Prometheus</strong> and <strong>Grafana</strong> monitoring with Alertmanager rules to detect and respond to infrastructure issues.</li>
+              <li>Manage credentials securely through Jenkins credentials and AWS IAM, and support development teams with Git branching and code review workflows.</li>
+              <li>Troubleshoot issues across Linux servers, Kubernetes pods, networking and AWS VPC connectivity.</li>
+            </ul>
+            <div class="tags"><span>AWS</span><span>EKS</span><span>Terraform</span><span>Ansible</span><span>Jenkins</span><span>GitHub Actions</span><span>Docker</span><span>Helm</span><span>Nexus</span><span>Prometheus</span><span>Grafana</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-head">
+          <h2>Featured <span class="gradient-text">projects</span></h2>
+          <p>Cloud platforms, infrastructure automation, CI/CD pipelines and full-stack applications — all on GitHub.</p>
+        </div>
+
+        <div class="filters" role="group" aria-label="Filter projects">
+          <button class="filter active" data-filter="all">All</button>
+          <button class="filter" data-filter="cloud">Cloud &amp; IaC</button>
+          <button class="filter" data-filter="cicd">CI/CD &amp; K8s</button>
+          <button class="filter" data-filter="fullstack">Full-Stack &amp; AI</button>
+        </div>
+
+        <div class="projects-grid">
+          <article class="card project featured reveal" data-cat="cloud fullstack">
+            <div class="project-top">
+              <div class="project-icon"><i class="fas fa-magnifying-glass-chart"></i></div>
+              <span class="project-kind mono">Featured · Full-stack platform</span>
+            </div>
+            <h3>CloudLens — AWS Monitoring &amp; Cost Intelligence Platform</h3>
+            <p class="project-desc">Full-stack platform that gives visibility into AWS resources, metrics and costs across connected AWS accounts.</p>
+            <ul class="project-list">
+              <li>FastAPI backend with Celery workers collecting data from AWS APIs (EC2, EKS, ECS, Lambda, RDS, S3, VPC, IAM, CloudWatch, Cost Explorer) into PostgreSQL and Redis.</li>
+              <li>Connected AWS accounts through STS cross-account role assumption and encrypted stored credentials, with JWT auth, rate limiting and Prometheus metrics.</li>
+              <li>React/TypeScript dashboard for inventory, cost, alerts and IAM views; both services packaged in multi-stage Docker images with non-root users and health checks.</li>
+            </ul>
+            <div class="tags"><span>Python</span><span>FastAPI</span><span>PostgreSQL</span><span>SQLAlchemy</span><span>Alembic</span><span>Redis</span><span>Celery</span><span>boto3</span><span>React</span><span>TypeScript</span><span>Docker</span><span>Nginx</span></div>
+            <div class="project-links">
+              <a href="https://github.com/shoukatmastoi997-maker/cloud_lens_backend" target="_blank" rel="noreferrer"><i class="fab fa-github"></i> Backend</a>
+              <a href="https://github.com/shoukatmastoi997-maker/Cloud_lens_Frontend" target="_blank" rel="noreferrer"><i class="fab fa-github"></i> Frontend</a>
+            </div>
+          </article>
+
+          <article class="card project reveal" data-cat="cloud">
+            <div class="project-top">
+              <div class="project-icon"><i class="fas fa-server"></i></div>
+              <span class="project-kind mono">IaC · Observability</span>
+            </div>
+            <h3>AWS Infrastructure Automation &amp; Monitoring Stack</h3>
+            <p class="project-desc">Provisions an AWS environment and configures a monitored web server end to end.</p>
+            <ul class="project-list">
+              <li>Terraform for VPC, public subnet, internet gateway, route table, security group and Ubuntu EC2, with outputs for IP and SSH access.</li>
+              <li>Ansible playbooks and roles to install Nginx, Node Exporter, Prometheus and Grafana.</li>
+              <li>Prometheus alert rules for high CPU, high memory and instance-down conditions.</li>
+            </ul>
+            <div class="tags"><span>Terraform</span><span>Ansible</span><span>AWS VPC</span><span>EC2</span><span>Nginx</span><span>Prometheus</span><span>Grafana</span></div>
+            <div class="project-links">
+              <a href="https://github.com/shoukatmastoi997-maker/aws-infrastructure-automation" target="_blank" rel="noreferrer"><i class="fab fa-github"></i> Source</a>
+            </div>
+          </article>
+
+          <article class="card project reveal" data-cat="cicd">
+            <div class="project-top">
+              <div class="project-icon"><i class="fas fa-hotel"></i></div>
+              <span class="project-kind mono">CI/CD · Kubernetes</span>
+            </div>
+            <h3>CI/CD &amp; Kubernetes Deployment — AI Hotel Reservation</h3>
+            <p class="project-desc">Full-stack reservation app delivered through a Jenkins pipeline and deployed with Kubernetes manifests.</p>
+            <ul class="project-list">
+              <li>Webhook-triggered Jenkins pipeline that injects env files from Jenkins credentials, builds backend and frontend images and pushes to Docker Hub.</li>
+              <li>K8s manifests with a dedicated namespace, two backend replicas, ConfigMaps, Secrets, a gp2-backed PVC and a LoadBalancer Service.</li>
+              <li>Flask REST APIs with JWT auth, bcrypt hashing, role-based admin access and rule-based room recommendations.</li>
+            </ul>
+            <div class="tags"><span>Jenkins</span><span>Docker</span><span>Docker Hub</span><span>Kubernetes</span><span>Flask</span><span>React</span><span>SQLite</span><span>Nginx</span></div>
+            <div class="project-links">
+              <a href="https://github.com/shoukatmastoi997-maker/Complete-CI-CD-Devop-project-_-AI_hotel-reservation-" target="_blank" rel="noreferrer"><i class="fab fa-github"></i> Source</a>
+            </div>
+          </article>
+
+          <article class="card project reveal" data-cat="cicd fullstack">
+            <div class="project-top">
+              <div class="project-icon"><i class="fas fa-list-check"></i></div>
+              <span class="project-kind mono">CI/CD · Containers</span>
+            </div>
+            <h3>Task Management App with CI/CD Pipeline</h3>
+            <p class="project-desc">Containerised full-stack task manager with automated build, test and image publishing.</p>
+            <ul class="project-list">
+              <li>Jenkins pipeline that tags client and server images with the build number, pushes them to Docker Hub and logs out after every run.</li>
+              <li>GitHub Actions workflow that installs dependencies, builds and runs tests on every push and pull request.</li>
+              <li>TypeScript REST API with JWT auth, Prisma/PostgreSQL and OpenAPI (Swagger) docs.</li>
+            </ul>
+            <div class="tags"><span>Jenkins</span><span>GitHub Actions</span><span>Docker Compose</span><span>Node.js</span><span>Express</span><span>TypeScript</span><span>Prisma</span><span>PostgreSQL</span><span>React</span></div>
+            <div class="project-links">
+              <a href="https://github.com/shoukatmastoi997-maker/cloud-native-devops-cicd-on-aws-eks" target="_blank" rel="noreferrer"><i class="fab fa-github"></i> Source</a>
+            </div>
+          </article>
+
+          <article class="card project reveal" data-cat="fullstack">
+            <div class="project-top">
+              <div class="project-icon"><i class="fas fa-brain"></i></div>
+              <span class="project-kind mono">Final Year Project · AI</span>
+            </div>
+            <h3>AI-Driven Disease Prediction &amp; Health Analytics</h3>
+            <p class="project-desc">Suggests likely conditions from selected symptoms, for educational and research purposes.</p>
+            <ul class="project-list">
+              <li>PyTorch neural network trained on a symptom dataset, served through FastAPI endpoints for prediction, history, analytics and reports.</li>
+              <li>Explainable-AI output showing the symptoms that contributed most, with High / Moderate / Low risk levels.</li>
+              <li>React dashboard for symptoms, results and analytics; predictions stored in SQLite with printable PDF reports.</li>
+            </ul>
+            <div class="tags"><span>Python</span><span>FastAPI</span><span>PyTorch</span><span>React (Vite)</span><span>Tailwind CSS</span><span>SQLite</span><span>FPDF</span></div>
+            <div class="project-links">
+              <a href="https://github.com/shoukatmastoi997-maker/Ai_driven-Disease-Prediction-web-app" target="_blank" rel="noreferrer"><i class="fab fa-github"></i> Source</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EDUCATION & CERTS ============ -->
+    <section class="section" id="education">
+      <div class="container">
+        <div class="section-head">
+          <h2>Education &amp; <span class="gradient-text">certifications</span></h2>
+        </div>
+        <div class="edu-grid">
+          <article class="card edu reveal">
+            <div class="edu-icon"><i class="fas fa-graduation-cap"></i></div>
+            <div>
+              <h3>Bachelor of Science in Computer Science (BSCS)</h3>
+              <p class="muted">Bahauddin Zakariya University — Multan, Pakistan</p>
+              <p class="edu-note"><i class="fas fa-flask"></i> Final Year Project: AI-Driven Disease Prediction and Health Analytics System (React, FastAPI, machine learning).</p>
+            </div>
+          </article>
+          <article class="card edu reveal">
+            <div class="edu-icon"><i class="fas fa-certificate"></i></div>
+            <div>
+              <h3>Certifications &amp; Training</h3>
+              <ul class="cert-list">
+                <li><i class="fas fa-circle-check"></i> DevOps Bootcamp — TechWorld with Nana</li>
+                <li><i class="fab fa-aws"></i> AWS Certificates</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-head">
+          <h2>Let’s work <span class="gradient-text">together</span></h2>
+          <p>Have a role, project or infrastructure challenge in mind? I’d love to hear about it.</p>
+        </div>
+        <div class="contact-grid">
+          <div class="card contact-info reveal">
+            <a class="contact-item" href="mailto:shoukatmastoi999@gmail.com">
+              <span class="contact-icon"><i class="fas fa-envelope"></i></span>
+              <span><small>Email</small><strong id="contactEmail">shoukatmastoi999@gmail.com</strong></span>
             </a>
-          </div>
-          <div class="project-icon-large">
-            <i class="fas fa-brain"></i>
-          </div>
-        </div>
-        <div class="project-content">
-          <div class="project-category">AI & Health Analytics Platform</div>
-          <h3>AI Disease Prediction System</h3>
-          <p>Architected full-stack health analytics platform with PyTorch ML pipeline, FastAPI REST API, React frontend, and containerized deployment.</p>
-          <div class="project-tech">
-            <span>FastAPI</span>
-            <span>PyTorch</span>
-            <span>React</span>
-            <span>Docker</span>
-          </div>
-        </div>
-      </article>
-
-      <!-- Project 2: Hotel Reservation System -->
-      <article class="project-card glass-card">
-        <div class="project-image">
-          <div class="project-overlay">
-            <a href="https://github.com/shoukat-ali" target="_blank" rel="noreferrer" class="project-link" aria-label="View Hotel Reservation System Project">
-              <i class="fas fa-external-link-alt"></i>
+            <a class="contact-item" href="tel:+923197390730">
+              <span class="contact-icon"><i class="fas fa-phone"></i></span>
+              <span><small>Phone</small><strong>+92 319 7390730</strong></span>
             </a>
-          </div>
-          <div class="project-icon-large">
-            <i class="fas fa-hotel"></i>
-          </div>
-        </div>
-        <div class="project-content">
-          <div class="project-category">Cloud Native & Orchestration</div>
-          <h3>Cloud Hotel Reservation System</h3>
-          <p>Containerized application deployed on AWS EKS using GitHub Actions, Jenkins CI/CD pipelines, and Helm chart deployment management.</p>
-          <div class="project-tech">
-            <span>AWS EKS</span>
-            <span>Docker</span>
-            <span>Jenkins</span>
-            <span>GitHub Actions</span>
-          </div>
-        </div>
-      </article>
-
-      <!-- Project 3: Automated Infrastructure Monitoring Stack -->
-      <article class="project-card glass-card">
-        <div class="project-image">
-          <div class="project-overlay">
-            <a href="https://github.com/shoukat-ali" target="_blank" rel="noreferrer" class="project-link" aria-label="View Infrastructure Monitoring Stack">
-              <i class="fas fa-external-link-alt"></i>
+            <a class="contact-item" href="https://www.linkedin.com/in/shoukatali999/" target="_blank" rel="noreferrer">
+              <span class="contact-icon"><i class="fab fa-linkedin-in"></i></span>
+              <span><small>LinkedIn</small><strong>in/shoukatali999</strong></span>
             </a>
-          </div>
-          <div class="project-icon-large">
-            <i class="fas fa-chart-line"></i>
-          </div>
-        </div>
-        <div class="project-content">
-          <div class="project-category">IaC & Observability</div>
-          <h3>Automated Observability Stack</h3>
-          <p>Provisioned AWS EC2 servers via Terraform, automated configuration using Ansible, and configured Prometheus and Grafana for live metric monitoring.</p>
-          <div class="project-tech">
-            <span>Terraform</span>
-            <span>Ansible</span>
-            <span>Prometheus</span>
-            <span>Grafana</span>
-          </div>
-        </div>
-      </article>
-
-      <!-- Project 4: Local Kubernetes Development Environment -->
-      <article class="project-card glass-card">
-        <div class="project-image">
-          <div class="project-overlay">
-            <a href="https://github.com/shoukat-ali" target="_blank" rel="noreferrer" class="project-link" aria-label="View Minikube Dev Environment Project">
-              <i class="fas fa-external-link-alt"></i>
+            <a class="contact-item" href="https://github.com/shoukatmastoi997-maker" target="_blank" rel="noreferrer">
+              <span class="contact-icon"><i class="fab fa-github"></i></span>
+              <span><small>GitHub</small><strong>shoukatmastoi997-maker</strong></span>
             </a>
+            <div class="contact-item static">
+              <span class="contact-icon"><i class="fas fa-location-dot"></i></span>
+              <span><small>Location</small><strong>Islamabad, Pakistan</strong></span>
+            </div>
           </div>
-          <div class="project-icon-large">
-            <i class="fas fa-cubes"></i>
-          </div>
+
+          <form class="card contact-form reveal" id="contactForm">
+            <div class="form-row">
+              <label>Your Name<input type="text" name="name" placeholder="John Doe" required></label>
+              <label>Your Email<input type="email" name="email" placeholder="john@example.com" required></label>
+            </div>
+            <label>Subject<input type="text" name="subject" placeholder="DevOps role / project discussion" required></label>
+            <label>Message<textarea name="message" rows="5" placeholder="Tell me about your project…" required></textarea></label>
+            <button type="submit" class="btn btn-primary btn-full">Send Message <i class="fas fa-paper-plane"></i></button>
+          </form>
         </div>
-        <div class="project-content">
-          <div class="project-category">Kubernetes & Storage</div>
-          <h3>Local K8s Microservices Env</h3>
-          <p>Constructed local Minikube development cluster featuring PersistentVolume storage claims and microservices ingress routing for Python & React apps.</p>
-          <div class="project-tech">
-            <span>Minikube</span>
-            <span>Kubernetes</span>
-            <span>PersistentVolumes</span>
-            <span>Linux</span>
-          </div>
-        </div>
-      </article>
-
-    </div>
-  </div>
-</section>
-
-    <section class="education"><div class="container"><div class="section-header"><span class="section-subtitle">Academic Background</span><h2 class="section-title">Education</h2></div><div class="education-grid"><article class="education-card glass-card"><div class="education-icon"><i class="fas fa-graduation-cap"></i></div><div class="education-content"><h3>BS Computer Science</h3><p class="education-school">Bahauddin Zakariya University, Multan</p></div></article></div></div></section>
-
-    <section class="contact" id="contact"><div class="container"><div class="section-header"><span class="section-subtitle">Get In Touch</span><h2 class="section-title">Let’s Work <span class="gradient-text">Together</span></h2><p class="section-description">Have a project or opportunity in mind? I’d love to hear about it.</p></div><div class="contact-wrapper">
-      <div class="contact-info glass-card"><h3>Contact Information</h3><p>Reach out through any of the channels below.</p><div class="contact-details"><div class="contact-item"><div class="contact-icon"><i class="fas fa-envelope"></i></div><div class="contact-text"><span>Email</span><a id="contactEmail" href="mailto:shoukatmastoi999@gmail.com">shoukatmastoi999@gmail.com</a></div></div><div class="contact-item"><div class="contact-icon"><i class="fas fa-phone"></i></div><div class="contact-text"><span>Phone</span><a href="tel:+923197390730">+92 319 7390730</a></div></div><div class="contact-item"><div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div><div class="contact-text"><span>Location</span><p>Pakistan</p></div></div></div><div class="social-links"><a href="https://www.linkedin.com/in/shoukatali999/" target="_blank" rel="noreferrer" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a><a href="https://github.com/shoukatmastoi997-maker" target="_blank" rel="noreferrer" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a></div></div>
-      <form class="contact-form glass-card" id="contactForm"><div class="form-row"><div class="form-group"><label for="name">Your Name</label><input type="text" id="name" name="name" placeholder="John Doe" required></div><div class="form-group"><label for="email">Your Email</label><input type="email" id="email" name="email" placeholder="john@example.com" required></div></div><div class="form-group"><label for="subject">Subject</label><input type="text" id="subject" name="subject" placeholder="Project discussion" required></div><div class="form-group"><label for="message">Message</label><textarea id="message" name="message" rows="5" placeholder="Tell me about your project…" required></textarea></div><button type="submit" class="btn btn-primary btn-full"><span>Send Message</span><i class="fas fa-paper-plane"></i></button></form>
-    </div></div></section>
+      </div>
+    </section>
   </main>
-  <footer class="footer"><div class="container"><div class="footer-content"><div class="footer-brand"><a href="#about" class="footer-logo"><span class="logo-text">Shoukat</span><span class="logo-dot">.</span></a><p>DevOps Engineer specializing in cloud infrastructure, automation, and scalable solutions.</p></div><div class="footer-links"><h4>Quick Links</h4><ul><li><a href="#about">About</a></li><li><a href="#skills">Skills</a></li><li><a href="#projects">Projects</a></li><li><a href="#contact">Contact</a></li></ul></div><div class="footer-newsletter"><h4>Stay Connected</h4><p>Follow for updates and insights.</p><div class="footer-social"><a href="https://www.linkedin.com/in/shoukatali999/" target="_blank" rel="noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a><a href="https://github.com/shoukatmastoi997-maker" target="_blank" rel="noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a></div></div></div><div class="footer-bottom"><p>© <span id="year">2026</span> Shoukat Ali. Crafted with care.</p></div></div></footer>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <a href="#home" class="logo"><span class="logo-mark">SA</span><span class="logo-text">Shoukat<span class="accent">.</span>Cloud</span></a>
+      <p class="muted">© <span id="year">2026</span> Shoukat Ali · DevOps &amp; Cloud Engineer</p>
+      <div class="footer-social">
+        <a href="https://github.com/shoukatmastoi997-maker" target="_blank" rel="noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/shoukatali999/" target="_blank" rel="noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="mailto:shoukatmastoi999@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#home" class="to-top" id="toTop" aria-label="Back to top"><i class="fas fa-arrow-up"></i></a>
+
   <script src="script.js"></script>
 </body>
 </html>
